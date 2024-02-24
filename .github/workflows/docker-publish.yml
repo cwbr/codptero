@@ -37,9 +37,6 @@ jobs:
       matrix:
         tag:
          - ptero-wine
-         - ptero-dotnet
-         - ptero-plutonium
-         - ptero-iw4madmin
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -66,7 +63,7 @@ jobs:
           context: ./IMAGES/${{ matrix.tag }}
           file: ./IMAGES/${{ matrix.tag }}/dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ghcr.io/draakoor/codptero/${{ matrix.tag }}:latest
+          tags: ghcr.io/cwbr/codptero/${{ matrix.tag }}:latest
           #tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
