@@ -23,10 +23,8 @@ WORKDIR /home/container
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENV DISPLAY=:0
-
 ENV WINEPATH=/iw4x-base
-ENV BASE_FILES=/iw4x-base
+ENV BASE_INSTALL=/iw4x-base
 ENV IW4x_INSTALL=/home/container
 
 CMD ["/bin/bash", "/entrypoint.sh"]
