@@ -25,5 +25,6 @@ COPY entrypoint.sh /entrypoint.sh
 
 ENV WINEPATH=/iw4x-base
 ENV BASE_FILES=/iw4x-base
+ENV IW4x_INSTALL=/home/container
 
 CMD ["/bin/bash", "/entrypoint.sh"]
