@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build ./IMAGES/ptero-iw4madmin --file Dockerfile --tag ptero-iw4madmin:latest
+      run: cd ./IMAGES/ptero-iw4madmin && docker build . --file Dockerfile --tag ptero-iw4madmin:latest
