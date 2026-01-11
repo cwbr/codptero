@@ -38,6 +38,7 @@ jobs:
       matrix:
         tag:
          - ptero-wine
+         - ptero-iw4madmin
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
