@@ -1,6 +1,15 @@
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
 
+USER root
+RUN apt-get update; \
+    apt-get install -y apt-transport-https && \
+    apt-get update && \
+    apt-get install -y bash curl wget unzip
+
 MAINTAINER draakoor, <dominique@wellisch-itservice.de>
+
+USER container
+ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 WORKDIR /home/container/Lib
 
 # Copy over entrypoint
