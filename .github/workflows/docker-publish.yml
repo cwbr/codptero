@@ -37,7 +37,7 @@ jobs:
       max-parallel: 1
       matrix:
         tag:
-         - ptero-wine
+         #- ptero-wine
          - ptero-iw4madmin
     steps:
       - name: Checkout repository
